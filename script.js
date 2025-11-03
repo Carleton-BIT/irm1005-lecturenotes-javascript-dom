@@ -1,5 +1,4 @@
-let heading = document.querySelector("h1")
-heading.style.fontSize = "10px"
+
 
 const listElements = document.querySelectorAll("li");
 
@@ -9,10 +8,14 @@ listElements.forEach(
     }
 )
 
-const newListElement = document.createElement("li")
-newListElement.textContent = 'James is the best'
+function addElementToList() {
+    const newListElement = document.createElement("li")
+    newListElement.textContent = 'James is the best'
+    const myList = document.querySelector("ul")
+    myList.append(newListElement)
+}
 
-const myList = document.querySelector("ul")
 
-myList.append(newListElement)
+const addElementButton = document.querySelector('#add-element-btn')
 
+//addElementButton.addEventListener("click", addElementToList)
